@@ -74,11 +74,10 @@ public class BookController {
 		
 		if(book == null) throw new RuntimeException("Book not found");
 		
-		book.setEnvironment(port +"FEIGN");
-			
-		
+					
 		Cambio cambio = proxy.getCambio(book.getPrice(),"USD", currency);
 		book.setPrice(cambio.getConvertedValue());
+		book.setEnvironment("Book port:" + port +" Cambio port: " + cambio.getEnvironment());
 		
 		
 		return book;
