@@ -1,4 +1,4 @@
-package br.com.tcessin.hrconfigserver;
+package br.com.tcessin.hruser;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
